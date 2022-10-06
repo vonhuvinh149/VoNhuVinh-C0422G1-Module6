@@ -1,104 +1,106 @@
-<!--<section class="container-fluid">-->
-<!--  <div class="row container-fluid">-->
-<!--    <div class="col"></div>-->
-<!--    <div class="col-lg-8 col-md-12">-->
-<!--      <div id="form_edit">-->
-<!--        <h1 class="text-white">Cập nhật xe</h1>-->
-<!--        <form [formGroup]="formUpdateCar" (ngSubmit)="getEditCar()" *ngIf="car">-->
-<!--          <label for="nb">Biển số xe:</label>-->
-<!--          <input formControlName="idNumber" name="idNumber" type="text" id="nb" readonly style="background: #999999">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.idNumber.hasError('required') &&-->
-<!--               formUpdateCar.controls.idNumber.touched">-->
-<!--            Vui lòng nhập-->
-<!--          </div>-->
-<!--          <label for="2">Loại xe:</label>-->
+<section class="container-fluid">
+  <div class="row container-fluid">
+    <div class="col"></div>
+    <div class="col-lg-8 col-md-12">
+      <div id="form_edit">
+        <h1 class="text-white">Cập nhật xe</h1>
+        <form [formGroup]="formUpdateCar" (ngSubmit)="getEditCar()" *ngIf="car">
+          <label for="nb">Biển số xe:</label>
+          <input formControlName="idNumber" name="idNumber" type="text" id="nb" readonly style="background: #999999">
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.idNumber.hasError('required') &&
+               formUpdateCar.controls.idNumber.touched">
+            Vui lòng nhập
+          </div>
+          <label for="2">Loại xe:</label>
 <!--          <input formControlName="carType" name="carType" type="text" id="2">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.carType.hasError('required') &&-->
-<!--               formUpdateCar.controls.carType.touched">-->
-<!--            Vui lòng nhập-->
-<!--          </div>-->
-<!--          <label for="3">Tên nhà xe:</label>-->
-<!--          <input formControlName="houseCarName" name="houseCarName" type="text" id="3">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.houseCarName.hasError('required') &&-->
-<!--               formUpdateCar.controls.houseCarName.touched">-->
-<!--            Vui lòng nhập-->
-<!--          </div>-->
-<!--          <label for="5">Nơi bắt đầu:</label>-->
-<!--          <select formControlName="startAddress" id="5" style="width: 100% ; padding: 10px ; border-radius: 10px"-->
-<!--                  name="startAddress">-->
-<!--            <option *ngFor="let startAddress of  startAddress"-->
-<!--                    [ngValue]="startAddress">{{startAddress.name}}</option>-->
-<!--          </select>-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.startAddress.hasError('required') &&-->
-<!--               formUpdateCar.controls.startAddress.touched">-->
-<!--            Vui lòng nhập !!-->
-<!--          </div>-->
+          <select name="carType" id="2" formControlName="carType"  style="width: 100% ; padding: 10px ; border-radius: 10px">
+            <option *ngFor="let carType of carType" [ngValue]="carType" >{{carType.carTypeName}}</option>
+          </select>
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.carType.hasError('required') &&
+               formUpdateCar.controls.carType.touched">
+            Vui lòng nhập
+          </div>
+          <label for="3">Tên nhà xe:</label>
+          <input formControlName="houseCarName" name="houseCarName" type="text" id="3">
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.houseCarName.hasError('required') &&
+               formUpdateCar.controls.houseCarName.touched">
+            Vui lòng nhập
+          </div>
+          <label for="5">Nơi bắt đầu:</label>
+          <select formControlName="startAddress" id="5" style="width: 100% ; padding: 10px ; border-radius: 10px"
+                  name="startAddress">
+            <option *ngFor="let startAddress of  startAddress"
+                    [ngValue]="startAddress">{{startAddress.addressName}}</option>
+          </select>
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.startAddress.hasError('required') &&
+               formUpdateCar.controls.startAddress.touched">
+            Vui lòng nhập !!
+          </div>
 
-<!--          <label for="6">Nơi kết thúc:</label>-->
-<!--          <select formControlName="endAddress" id="6" style="width: 100% ; padding: 10px ; border-radius: 10px"-->
-<!--                  name="endAddress" >-->
-<!--            <option *ngFor="let endAddress of  endAddress"-->
-<!--                    [ngValue]="endAddress">{{endAddress.name}}</option>-->
-<!--          </select>-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.endAddress.hasError('required') &&-->
-<!--               formUpdateCar.controls.endAddress.touched">-->
-<!--            Vui lòng nhập !!-->
-<!--          </div>-->
+          <label for="6">Nơi kết thúc:</label>
+          <select formControlName="endAddress" id="6" style="width: 100% ; padding: 10px ; border-radius: 10px"
+                  name="endAddress" >
+            <option *ngFor="let endAddress of  endAddress"
+                    [ngValue]="endAddress">{{endAddress.addressName}}</option>
+          </select>
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.endAddress.hasError('required') &&
+               formUpdateCar.controls.endAddress.touched">
+            Vui lòng nhập !!
+          </div>
 
-<!--          <label for="7">Nhập số điện thoại:</label>-->
-<!--          <input formControlName="phone" name="phone" type="text" id="7">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.phone.hasError('required') &&-->
-<!--               formUpdateCar.controls.phone.touched">-->
-<!--            Vui lòng nhập !!-->
-<!--          </div>-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.phone.hasError('pattern') &&-->
-<!--               formUpdateCar.controls.phone.touched">-->
-<!--            Vui lòng nhập đúng địn dạng !!-->
-<!--          </div>-->
+          <label for="7">Nhập số điện thoại:</label>
+          <input formControlName="phone" name="phone" type="text" id="7">
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.phone.hasError('required') &&
+               formUpdateCar.controls.phone.touched">
+            Vui lòng nhập !!
+          </div>
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.phone.hasError('pattern') &&
+               formUpdateCar.controls.phone.touched">
+            Vui lòng nhập đúng địn dạng !!
+          </div>
 
-<!--          <label for="8">Nhập email:</label>-->
-<!--          <input formControlName="email" name="email" type="text" id="8">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.email.hasError('required') &&-->
-<!--               formUpdateCar.controls.email.touched">-->
-<!--            Vui lòng nhập !!-->
-<!--          </div>-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.email.hasError('email') &&-->
-<!--               formUpdateCar.controls.email.touched">-->
-<!--            Vui lòng nhập đúng định dạng !!-->
-<!--          </div>-->
+          <label for="8">Nhập email:</label>
+          <input formControlName="email" name="email" type="text" id="8">
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.email.hasError('required') &&
+               formUpdateCar.controls.email.touched">
+            Vui lòng nhập !!
+          </div>
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.email.hasError('email') &&
+               formUpdateCar.controls.email.touched">
+            Vui lòng nhập đúng định dạng !!
+          </div>
 
-<!--          <label for="4">Giờ đi:</label>-->
-<!--          <input formControlName="startTime" name="startTime" type="text" id="4">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.startTime.hasError('required') &&-->
-<!--               formUpdateCar.controls.startTime.touched">-->
-<!--            Vui lòng nhập !!-->
-<!--          </div>-->
+          <label for="4">Giờ đi:</label>
+          <input formControlName="startTime" name="startTime" type="text" id="4">
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.startTime.hasError('required') &&
+               formUpdateCar.controls.startTime.touched">
+            Vui lòng nhập !!
+          </div>
 
-<!--          <label for="9">Giờ đến:</label>-->
-<!--          <input formControlName="endTime" name="endTime" type="text" id="9">-->
-<!--          <div class="text-danger"-->
-<!--               *ngIf="formUpdateCar.controls.endTime.hasError('required') &&-->
-<!--               formUpdateCar.controls.endTime.touched">-->
-<!--            Vui lòng nhập !!-->
-<!--          </div>-->
-
-<!--          <div style="margin-top: 20px">-->
-<!--            <button routerLink="" class="bg-secondary">Quay lại</button>-->
-<!--            <button type="submit">Cập nhật</button>-->
-<!--          </div>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="col"></div>-->
-<!--  </div>-->
-<!--</section>-->
+          <label for="9">Giờ đến:</label>
+          <input formControlName="endTime" name="endTime" type="text" id="9">
+          <div class="text-danger"
+               *ngIf="formUpdateCar.controls.endTime.hasError('required') &&
+               formUpdateCar.controls.endTime.touched">
+            Vui lòng nhập !!
+          </div>
+          <div style="margin-top: 20px">
+            <button routerLink="" class="bg-secondary">Quay lại</button>
+            <button type="submit">Cập nhật</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</section>

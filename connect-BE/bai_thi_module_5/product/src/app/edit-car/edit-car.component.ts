@@ -6,6 +6,8 @@ import {CarService} from '../service/car.service';
 import {StartAddress} from '../model/startAddress';
 import {EndtAddress} from '../model/endAddress';
 import {Car} from '../model/car';
+import {CarTypeService} from '../service/car-type.service';
+import {CarType} from '../model/carType';
 
 @Component({
   selector: 'app-edit-car',
@@ -16,16 +18,18 @@ export class EditCarComponent implements OnInit {
   formUpdateCar: FormGroup;
   startAddress: StartAddress[];
   endAddress: EndtAddress[];
+  carType: CarType[];
   car: Car;
 
   constructor(private activatedRoute: ActivatedRoute, private addressService: AddressService,
-              private carService: CarService, private router: Router) {
+              private carService: CarService, private router: Router, private carTypeService: CarTypeService) {
     activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       const id = paramMap.get('id');
       // tslint:disable-next-line:radix
       this.carService.getById(parseInt(id)).subscribe(next => {
         this.getAllStartAddress();
-        // this.getAllEndAddress();
+        this.getAllEndAddress();
+        this.getAllCarType();
         this.car = next;
         this.formUpdateCar = new FormGroup({
           id: new FormControl(this.car.id),
@@ -53,17 +57,23 @@ export class EditCarComponent implements OnInit {
     });
   }
 
-  // getAllEndAddress() {
-  //   this.addressService.getAllEndAddress().subscribe(next => {
-  //     this.endAddress = next;
-  //   });
-  // }
+  getAllEndAddress() {
+    this.addressService.getAllEndAddress().subscribe(next => {
+      this.endAddress = next;
+    });
+  }
 
   getEditCar() {
     console.log(this.formUpdateCar.value);
     this.carService.getUpdateCar(this.formUpdateCar.value).subscribe(next => {
       this.router.navigateByUrl('');
       alert(' cập nhập thành công');
+    });
+  }
+
+  getAllCarType() {
+    this.carTypeService.getAllCarType().subscribe(next => {
+      this.carType = next;
     });
   }
 }

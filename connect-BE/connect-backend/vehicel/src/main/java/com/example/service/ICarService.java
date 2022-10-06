@@ -12,4 +12,6 @@ public interface ICarService {
     void deleteCar(Integer id);
 
     Optional<Car> findCarId(Integer id);
+
+    void save(Car car);
 }

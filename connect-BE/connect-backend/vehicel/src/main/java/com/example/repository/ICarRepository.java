@@ -24,4 +24,6 @@ public interface ICarRepository extends JpaRepository<Car, Integer> {
     @Query(value = "SELECT * FROM car where id = ?1", nativeQuery = true)
     Optional<Car> findCarId(Integer id);
 
+
+
 }

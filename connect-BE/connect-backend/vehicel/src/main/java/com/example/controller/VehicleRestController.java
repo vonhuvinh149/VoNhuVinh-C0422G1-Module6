@@ -38,11 +38,17 @@ public class VehicleRestController {
     }
 
     @GetMapping("/display/{id}")
-    public ResponseEntity<Optional<Car>> findById(@PathVariable Integer id){
+    public ResponseEntity<Optional<Car>> findById(@PathVariable Integer id) {
         Optional<Car> carById = this.carService.findCarId(id);
-        if (!carById.isPresent()){
+        if (!carById.isPresent()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(carById,HttpStatus.OK);
+        return new ResponseEntity<>(carById, HttpStatus.OK);
+    }
+
+    @PatchMapping("/update")
+    public ResponseEntity<?> updateCar( Pageable pageable, @RequestBody Car car) {
+        this.carService.save(car);
+        return new ResponseEntity<>(this.carService.findAllCar(pageable), HttpStatus.OK);
     }
 }

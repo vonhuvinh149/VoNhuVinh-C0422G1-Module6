@@ -20,11 +20,10 @@ export class CarService {
   }
 
   getById(id: number) {
-    console.log(id);
     return this.httpClient.get('http://localhost:8080/vehicle/display/' + id);
   }
 
   getUpdateCar(car: Car) {
-    return this.httpClient.patch('http://localhost:3000/car/' + car.id, car);
+    return this.httpClient.patch('http://localhost:8080/vehicle/update/' + car.id, car);
   }
 }

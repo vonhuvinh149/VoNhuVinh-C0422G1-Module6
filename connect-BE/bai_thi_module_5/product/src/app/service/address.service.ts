@@ -13,4 +13,8 @@ export class AddressService {
   getAllStartAddress(): Observable<any> {
     return this.httpClient.get('http://localhost:8080/address/list');
   }
+
+  getAllEndAddress(): Observable<any> {
+    return this.httpClient.get('http://localhost:8080/address/list');
+  }
 }
