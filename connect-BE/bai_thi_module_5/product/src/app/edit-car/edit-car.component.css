@@ -1,0 +1,67 @@
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url('https://toanthaydinh.com/wp-content/uploads/2020/04/hinh-nen-den-doc-dao_053033588-1280x800-8.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#form_edit {
+  margin: 50px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 30px 50px;
+  z-index: 2;
+}
+
+#form_edit input {
+  width: 100%;
+  margin: 10px auto;
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 5px 15px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  outline: none;
+  position: relative;
+}
+
+#form_edit input:focus {
+  border-bottom: 5px solid #d63384 ;
+  color: red;
+}
+
+button {
+  font-size: 24px;
+  padding: 5px 10px;
+  background: forestgreen;
+  color: white;
+  border: 1px solid rgba(255,255,255,2);
+  outline: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  margin: 5px;
+}
+
+label{
+  color: #DDDDDD;
+  font-weight: bolder;
+}
+
+button:focus{
+  background: #666666;
+}
+
+.text-danger {
+  font-weight: bolder;
+}

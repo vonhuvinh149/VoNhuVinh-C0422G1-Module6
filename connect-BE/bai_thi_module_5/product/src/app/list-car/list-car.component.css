@@ -1,0 +1,91 @@
+body{
+  scroll-margin: 0;
+
+}
+
+section {
+  position: relative;
+  background: black;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://toanthaydinh.com/wp-content/uploads/2020/04/hinh-nen-den-doc-dao_053033588-1280x800-8.jpg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+/*section::before {*/
+/*    content: '';*/
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*    position: absolute;*/
+/*    background: linear-gradient(yellow, #555555);*/
+/*    transform: translate(450px, -200px);*/
+/*}*/
+
+/*section::after {*/
+/*    content: '';*/
+/*    width: 500px;*/
+/*    height: 500px;*/
+/*    position: absolute;*/
+/*    background: linear-gradient(deeppink, dodgerblue);*/
+/*    border-radius: 50%;*/
+/*    transform: translate(-350px, 200px);*/
+/*}*/
+
+#form_create {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+#form_create h1 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#form_create table tr th {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#form_create table tr td {
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+#form_create table tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+#search input{
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  padding:5px 10px;
+  color: #FF3399;
+  border-bottom: 2px solid #666666;
+
+}
+
+#search button{
+  background: #66CC99;
+  color: whitesmoke;
+  padding: 5px 7px;
+  border-bottom: 2px solid #666666;
+  border-radius: 0 10px 10px 0;
+}
+
+

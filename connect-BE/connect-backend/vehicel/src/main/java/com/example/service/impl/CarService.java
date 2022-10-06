@@ -1,0 +1,31 @@
+package com.example.service.impl;
+
+import com.example.model.Car;
+import com.example.repository.ICarRepository;
+import com.example.service.ICarService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
+
+@Service
+public class CarService implements ICarService {
+    @Autowired
+    private ICarRepository carRepository ;
+    @Override
+    public Page<Car> findAllCar(Pageable pageable) {
+        return this.carRepository.findAllCar(pageable);
+    }
+
+    @Override
+    public void deleteCar(Integer id) {
+        this.carRepository.deleteCar(id);
+    }
+
+    @Override
+    public Optional<Car> car(Integer id) {
+        return Optional.empty();
+    }
+}
