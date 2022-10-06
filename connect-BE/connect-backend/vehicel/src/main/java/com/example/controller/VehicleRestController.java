@@ -28,7 +28,21 @@ public class VehicleRestController {
     }
 
     @DeleteMapping("/remove/{id}")
-    public ResponseEntity<?> removeCar(@PathVariable Integer id){
-        Optional<Car> car = carService
+    public ResponseEntity<?> removeCar(@PathVariable("id") Integer id) {
+        Optional<Car> car = this.carService.findCarId(id);
+        if (!car.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        this.carService.deleteCar(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/display/{id}")
+    public ResponseEntity<Optional<Car>> findById(@PathVariable Integer id){
+        Optional<Car> carById = this.carService.findCarId(id);
+        if (!carById.isPresent()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(carById,HttpStatus.OK);
     }
 }

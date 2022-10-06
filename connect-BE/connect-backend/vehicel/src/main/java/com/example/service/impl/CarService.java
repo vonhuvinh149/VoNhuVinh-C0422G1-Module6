@@ -25,7 +25,7 @@ public class CarService implements ICarService {
     }
 
     @Override
-    public Optional<Car> car(Integer id) {
-        return Optional.empty();
+    public Optional<Car> findCarId(Integer id) {
+        return this.carRepository.findCarId(id);
     }
 }

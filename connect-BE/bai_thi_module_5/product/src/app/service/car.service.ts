@@ -16,12 +16,12 @@ export class CarService {
   }
 
   getDeleteCar(id: number) {
-    return this.httpClient.delete('http://localhost:3000/car/' + id);
+    return this.httpClient.delete('http://localhost:8080/vehicle/remove/' + id);
   }
 
   getById(id: number) {
     console.log(id);
-    return this.httpClient.get('http://localhost:3000/car/' + id);
+    return this.httpClient.get('http://localhost:8080/vehicle/display/' + id);
   }
 
   getUpdateCar(car: Car) {

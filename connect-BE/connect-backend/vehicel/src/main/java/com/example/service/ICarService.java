@@ -11,5 +11,5 @@ public interface ICarService {
 
     void deleteCar(Integer id);
 
-    Optional<Car> car(Integer id);
+    Optional<Car> findCarId(Integer id);
 }
