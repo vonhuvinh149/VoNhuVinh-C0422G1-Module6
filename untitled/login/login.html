@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background: #336699 ;
+">
+    <div class="container-fluid">
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img
+                        src="https://img.freepik.com/free-vector/flat-design-bookstore-logo-template_23-2149325254.jpg?w=2000"
+                        height="40"
+                        alt="MDB Logo"
+                        loading="lazy"/>
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white text-menu" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-menu" href="#">Giới tiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-menu" href="#"></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle text-menu text-white"
+                            href="#"
+                            id="navbarDropdownMenuLink1"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Danh mục sách
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                        <li>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center">
+            <a class="text-reset me-3" href="#">
+                <i class="fas fa-shopping-cart text-menu"></i>
+            </a>
+            <div class="dropdown">
+                <a
+                        class="text-reset me-3 dropdown-toggle hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <i class="fas fa-bell text-menu"></i>
+                    <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#">Some news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Another news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown " >
+                <a
+                        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuAvatar"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            class="rounded-circle"
+                            height="30"
+                            alt="Black and White Portrait of a Man"
+                            loading="lazy"
+                    />
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-lg-4">
+          <div id="login">
+              <div class="row">
+                  <h2 style="text-align: center;color: dodgerblue; margin-bottom: 20px" > Đăng nhập</h2>
+              </div>
+              <div class="row"><form>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                      <input type="email" id="form2Example1" class="form-control" />
+                      <label class="form-label" for="form2Example1">Email </label>
+                  </div>
+
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                      <input type="mật khẩu" id="form2Example2" class="form-control" />
+                      <label class="form-label" for="form2Example2">Mạt khẩu</label>
+                  </div>
+
+                  <!-- 2 column grid layout for inline styling -->
+
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+                  <!-- Register buttons -->
+                  <div class="text-center">
+                      <p>Bạn chưa có tài khoản? <a href="#!">Đăng kí</a></p>
+                      <p>Đăng nhập bằng</p>
+
+                      <button type="button" class="btn btn-primary btn-floating mx-1">
+                          <i class="fab fa-facebook-f"></i>
+                      </button>
+
+                      <button type="button" class="btn btn-primary btn-floating mx-1">
+                          <i class="fab fa-google"></i>
+                      </button>
+
+                  </div>
+              </form></div>
+          </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-light " style="background: #336699 ;
+">
+    <div class="container-fluid">
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img
+                        src="https://img.freepik.com/free-vector/flat-design-bookstore-logo-template_23-2149325254.jpg?w=2000"
+                        height="40"
+                        alt="MDB Logo"
+                        loading="lazy"/>
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white text-menu" href="#">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-menu" href="#">Giới tiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white text-menu" href="#"></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle text-menu text-white"
+                            href="#"
+                            id="navbarDropdownMenuLink1"
+                            role="button"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                    >
+                        Danh mục sách
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                        <li>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center">
+            <a class="text-reset me-3" href="#">
+                <i class="fas fa-shopping-cart text-menu"></i>
+            </a>
+            <div class="dropdown">
+                <a
+                        class="text-reset me-3 dropdown-toggle hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuLink"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <i class="fas fa-bell text-menu"></i>
+                    <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuLink"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#">Some news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Another news</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown ">
+                <a
+                        class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                        href="#"
+                        id="navbarDropdownMenuAvatar"
+                        role="button"
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false"
+                >
+                    <img
+                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            class="rounded-circle"
+                            height="30"
+                            alt="Black and White Portrait of a Man"
+                            loading="lazy"
+                    />
+                </a>
+                <ul
+                        class="dropdown-menu dropdown-menu-end"
+                        aria-labelledby="navbarDropdownMenuAvatar"
+                >
+                    <li>
+                        <a class="dropdown-item" href="#"></a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Đăng xuất</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row" style="margin-top: 100px">
+        <h1 style="text-align: center">Chi tiết </h1>
+    </div>
+    <div class="row " style="margin-top: 50px">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div style="width: 70%;margin: auto">
+                        <img width="100%"
+                             src="https://www.elle.vn/wp-content/uploads/2020/03/18/393135/sach-hay-isoji-mot-manh-hon-khong-the-quay-ve.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row" style="border-bottom: 4px solid dodgerblue">
+                        <h2>Một mảnh hồn không thể quay về</h2>
+                    </div>
+                    <div class="row " style="border-bottom:4px solid dodgerblue">
+                        <div class="col-lg-6">
+                            <ul id="detail">
+                                <li>Mả sản phẩm : 09909890</li>
+                                <li>Tác giả: võ như vinh</li>
+                                <li>Dịch giả: Thi Hoa</li>
+                                <li>Nhà xuất bản : Dân trí</li>
+                                <li>Số trang: 284</li>
+                                <li>Kích thước: 14x280 cm</li>
+                                <li>Ngày phát hành: 22-12-2021</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6" style="text-align: center">
+                            <div style="margin: 20px auto; background-color: dodgerblue; padding: 10px 0; color: white">
+                                Tổng giá: 54000đ
+                            </div>
+                            <div class="mb-3">
+                                <b>Số lượng:</b>
+                                <button style="border: none"> -</button>
+                                4
+                                <button style="border: none"> +</button>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-success" style="width: 70%">
+                                    Thêm vào giỏ hàng
+                                </button>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-success" style="width: 70%">
+                                    Mua ngay
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-lg-8">
+            <div class="row text-center mt-5">
+                <h1>Nội dung sách</h1>
+            </div>
+            <div class="row" style="font-size: 24px">
+                Con người ta có thể lừa dối người khác thỏa thích, nhưng lại không thể tự lừa dối chính mình”.
+                Qua công việc phát cơm thiện nguyện cho người già sống đơn thân, chàng sinh viên Isoda Souji đã có cuộc
+                gặp gỡ đầy duyên phận với bà lão mù một mắt tên là Kae. Mỗi lần gặp bà Kae, cậu đều được bà kể cho nghe
+                câu chuyện của đời mình, đặc biệt là chuyện tình cảm của bà với một người tên là Isoji - người mà bà một
+                lòng một dạ yêu thương nhưng đã hy sinh trong chiến trận xưa.
+                Liệu những câu chuyện cậu được nghe có hoàn toàn là sự thật? Và người đàn ông tên Isoji đó có thực sự
+                tồn tại hay không? Tất cả những bí ẩn sẽ dần được hé lộ và làm thay đổi hoàn toàn cuộc sống của Souji
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+></script>
+</body>
+</html>
