@@ -1,0 +1,68 @@
+<div class="container-fluid" style="margin-top: 150px">
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-7">
+      <div class="row">
+        <div style="margin-bottom: 20px">
+          <!--          <div style="width: 14%;height: 300px">-->
+          <!--          </div>-->
+          <!--          <div>-->
+          <!--            <span>vo nhu vinh ci vo nhu vinh</span>-->
+          <!--          </div>-->
+          <table style="width: 100%" border="1" cellpadding="10" cellspacing="1">
+            <thead></thead>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr style="border: 1px solid silver" *ngFor=" let carts of cart">
+              <td>
+                <input type="checkbox">
+              </td>
+              <td>
+                <div style="display: flex; justify-content: center;background: silver">
+                  <img
+                    src="{{carts.imageUrl}}"
+                    width="50%" height="200px" alt="">
+                </div>
+              </td>
+              <td>
+                {{carts.title}}
+              </td>
+              <td>
+                <button>-</button>
+                {{carts.quantityCart}}
+                <button>+</button>
+              </td>
+              <td>Giá: {{carts.price}}</td>
+              <td>
+                <button>xoá</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div style="border: 1px solid silver;padding: 5px">
+        <div style="padding: 30px 10px;text-align: center;border: 1px solid silver">Tổng tiền : 500000 đồng</div>
+        <div>
+          <div>
+            <button>Thanh toán</button>
+          </div>
+          <div>
+            <button></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-log-1">
+
+    </div>
+  </div>
+</div>

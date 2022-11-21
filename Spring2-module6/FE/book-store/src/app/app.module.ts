@@ -11,6 +11,8 @@ import { BookDetailComponent } from './book-detail/book-detail.component';
 import { CartBookComponent } from './cart-book/cart-book.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {FormsModule} from '@angular/forms';
     HomeComponent,
     LoginComponent,
     BookDetailComponent,
-    CartBookComponent
+    CartBookComponent,
+    LogoutComponent,
   ],
     imports: [
         BrowserModule,

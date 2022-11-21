@@ -1,4 +1,5 @@
-<div class="container-fluid">
+<app-header></app-header>
+<div class="container-fluid" *ngIf="book">
   <div class="row" style="margin-top: 100px">
     <h1 style="text-align: center">Chi tiết </h1>
   </div>
@@ -9,33 +10,34 @@
         <div class="col-lg-4">
           <div style="width: 70%;margin: auto">
             <img width="100%"
-                 src="https://www.elle.vn/wp-content/uploads/2020/03/18/393135/sach-hay-isoji-mot-manh-hon-khong-the-quay-ve.jpg"
+                 src="{{book.imageUrl}}"
                  alt="">
           </div>
         </div>
         <div class="col-lg-8">
           <div class="row" style="border-bottom: 4px solid dodgerblue">
-            <h2>Một mảnh hồn không thể quay về</h2>
+            <h2>{{book.title}}</h2>
           </div>
           <div class="row " style="border-bottom:4px solid dodgerblue">
             <div class="col-lg-6">
               <ul id="detail">
-                <li>Mả sản phẩm : 09909890</li>
-                <li>Tác giả: võ như vinh</li>
-                <li>Dịch giả: Thi Hoa</li>
-                <li>Nhà xuất bản : Dân trí</li>
-                <li>Số trang: 284</li>
-                <li>Kích thước: 14x280 cm</li>
-                <li>Ngày phát hành: 22-12-2021</li>
+                <li>Mả sản phẩm : {{book.id}}</li>
+                <li>Tác giả: {{book.author}}</li>
+                <li>Thể loại: {{book.categories.name}}</li>
+                <li>Nhà xuất bản : {{book.publisher}}</li>
+                <li>Số trang: {{book.totalPages}}</li>
+                <li>Kích thước: {{book.width}}x{{book.height}}cm</li>
+                <li>Giá: {{book.price}}</li>
+                <li>Giá: {{book.quantity}}</li>
               </ul>
             </div>
             <div class="col-lg-6" style="text-align: center">
-              <div style="margin: 20px auto; background-color: dodgerblue; padding: 10px 0; color: white">
+              <div style="margin: 20px auto; background-color: dodgerblue; padding: 24px 0; color: white;font-size: 27px">
                 Tổng giá: 54000đ
               </div>
               <div class="mb-3">
                 <b>Số lượng:</b>
-                <button style="border: none; padding: 5px 10px" >-</button>
+                <button style="border: none; padding: 5px 10px">-</button>
                 4
                 <button style="border: none;padding: 5px 10px"> +</button>
               </div>
@@ -63,13 +65,7 @@
         <h1>Nội dung sách</h1>
       </div>
       <div class="row" style="font-size: 24px">
-        Con người ta có thể lừa dối người khác thỏa thích, nhưng lại không thể tự lừa dối chính mình”.
-        Qua công việc phát cơm thiện nguyện cho người già sống đơn thân, chàng sinh viên Isoda Souji đã có cuộc
-        gặp gỡ đầy duyên phận với bà lão mù một mắt tên là Kae. Mỗi lần gặp bà Kae, cậu đều được bà kể cho nghe
-        câu chuyện của đời mình, đặc biệt là chuyện tình cảm của bà với một người tên là Isoji - người mà bà một
-        lòng một dạ yêu thương nhưng đã hy sinh trong chiến trận xưa.
-        Liệu những câu chuyện cậu được nghe có hoàn toàn là sự thật? Và người đàn ông tên Isoji đó có thực sự
-        tồn tại hay không? Tất cả những bí ẩn sẽ dần được hé lộ và làm thay đổi hoàn toàn cuộc sống của Souji
+        {{book.summary}}
       </div>
     </div>
     <div class="col"></div>

@@ -1,13 +1,16 @@
-export interface Book {
+import {Category} from './category';
+
+export interface IBookDto {
   id?: number;
-  totalPages?: number;
-  height?: number;
-  imageUrl?: string;
-  summary?: string;
-  quantity?: number;
-  width?: number;
-  price?: number;
-  publisher?: string;
-  author?: string;
-  title?: string;
+  height?: number,
+  price?: number,
+  imageUrl?: string,
+  publisher?: string,
+  totalPages?: string,
+  title?: string,
+  width?: number,
+  author?: string,
+  categories: Category,
+  summary?: string,
+  quantity: number
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TokenService} from '../Service/token.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  check = false;
+  avatar: string;
 
-  ngOnInit(): void {
+  constructor(
+    private tokenService: TokenService, private router: Router) {
+
   }
 
+  ngOnInit(): void {
+    if (this.tokenService.getToken()) {
+      this.check = true;
+      this.avatar = this.tokenService.getAvatar();
+    }
+  }
+
+  getLogout() {
+    this.tokenService.getLogout();
+  }
 }
